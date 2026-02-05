@@ -1,0 +1,238 @@
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #F5F7FA;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: #0A2540;
+}
+
+.App-link {
+    color: #F2B705;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Modern Glow Effects and Animation Utilities */
+
+/* Button with animated box-shadow glow effect */
+.btn-glow {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.btn-glow:hover {
+    box-shadow: 0 0 20px rgba(242, 183, 5, 0.5),
+                0 0 40px rgba(242, 183, 5, 0.3),
+                0 0 60px rgba(242, 183, 5, 0.1);
+    transform: translateY(-2px);
+}
+
+.btn-glow:active {
+    transform: translateY(0);
+    box-shadow: 0 0 10px rgba(242, 183, 5, 0.4);
+}
+
+/* Button with gradient background that shifts on hover */
+.btn-gradient {
+    background: linear-gradient(135deg, #F2B705 0%, #e6a704 50%, #F2B705 100%);
+    background-size: 200% 200%;
+    border: none;
+    color: #0A2540;
+    font-weight: 600;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.btn-gradient:hover {
+    background-position: 100% 0;
+    box-shadow: 0 4px 15px rgba(242, 183, 5, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-gradient:active {
+    transform: translateY(0);
+}
+
+/* Glassmorphism effect with backdrop blur */
+.glass-card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(10, 37, 64, 0.1);
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 12px 40px rgba(10, 37, 64, 0.15);
+    transform: translateY(-4px);
+}
+
+/* Dark variant for glass card */
+.glass-card.dark {
+    background: rgba(10, 37, 64, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #F5F7FA;
+}
+
+.glass-card.dark:hover {
+    background: rgba(10, 37, 64, 0.7);
+}
+
+/* Text with glow shadow */
+.text-glow {
+    text-shadow: 0 0 10px rgba(242, 183, 5, 0.5),
+                 0 0 20px rgba(242, 183, 5, 0.3),
+                 0 0 30px rgba(242, 183, 5, 0.1);
+    transition: text-shadow 0.3s ease;
+}
+
+.text-glow:hover {
+    text-shadow: 0 0 20px rgba(242, 183, 5, 0.8),
+                 0 0 40px rgba(242, 183, 5, 0.5),
+                 0 0 60px rgba(242, 183, 5, 0.3);
+}
+
+/* Text glow with white color variant */
+.text-glow-white {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+                 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Utility for scroll animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Scroll animation variants */
+.animate-on-scroll.fade-in {
+    transform: translateY(0);
+}
+
+.animate-on-scroll.slide-left {
+    transform: translateX(30px);
+}
+
+.animate-on-scroll.slide-left.visible {
+    transform: translateX(0);
+}
+
+.animate-on-scroll.slide-right {
+    transform: translateX(-30px);
+}
+
+.animate-on-scroll.slide-right.visible {
+    transform: translateX(0);
+}
+
+.animate-on-scroll.scale-in {
+    transform: scale(0.9);
+}
+
+.animate-on-scroll.scale-in.visible {
+    transform: scale(1);
+}
+
+/* Keyframes for gradient-shift animation */
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Animated gradient background */
+.animate-gradient {
+    background: linear-gradient(-45deg, #F2B705, #ffd54f, #F2B705, #ff8f00);
+    background-size: 400% 400%;
+    animation: gradient-shift 8s ease infinite;
+}
+
+/* Pulse glow animation */
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(242, 183, 5, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(242, 183, 5, 0.7),
+                    0 0 60px rgba(242, 183, 5, 0.4);
+    }
+}
+
+.animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Float animation for subtle movement */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .btn-glow,
+    .btn-gradient,
+    .glass-card,
+    .text-glow,
+    .animate-on-scroll {
+        transition: none;
+        animation: none;
+    }
+    
+    .animate-on-scroll {
+        opacity: 1;
+        transform: none;
+    }
+}
